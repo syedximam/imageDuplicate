@@ -9,3 +9,7 @@ git checkout to move between both branches
 git merge to merge both branches into a single files
 ghp_7n5wlAkGWGKiNYYHYj7R2IVuOg7Ptj1Gh3dlT
 
+
+Now you can upload the images to the server - great
+Now try to figure how to check the hash address of image and compare with each other.
+
