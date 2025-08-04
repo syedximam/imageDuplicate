@@ -1,0 +1,4 @@
+SSH is a protocol through which you can access remote servers.
+git init to start a new repo
+commit is a snapshot of your code
+
