@@ -1,4 +1,11 @@
 SSH is a protocol through which you can access remote servers.
 git init to start a new repo
 commit is a snapshot of your code
+git add - to add files in the repo
+git commit -m "your comment" - commits it or takes snapshot
+head is the most recent commit
+git branch to create another paraller branch of commit
+git checkout to move between both branches
+git merge to merge both branches into a single files
+ghp_7n5wlAkGWGKiNYYHYj7R2IVuOg7Ptj1Gh3dlT
 
