@@ -1,7 +1,7 @@
 const express = require('express')
 const multer = require('multer') // Install multer
 const path = require('path')
-const { hashing, compare } = require('./functions');
+const { hashing, compare, findAndDelete } = require('./functions');
 const app = express()
 const port = 3000
 
@@ -29,11 +29,11 @@ app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'))
 })
 app.post("/profile", upload.array('image'), (req, res) => {
-    const hashed = hashing();
-    console.log(hashed);
-    const compared = compare(hashed);
-    console.log(compared)
-    res.send({ msg: `You have ${compared.length} duplicate files ${compared}`});
+    const [hashed, hashedPath] = hashing();
+    const duplicates = compare(hashed);
+    const deleted = findAndDelete(hashedPath, duplicates);
+
+    res.send({ msg: `You have ${duplicates.length} duplicate files ${duplicates}`});
 })
 
 
